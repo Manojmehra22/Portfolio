@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Contact() {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -28,8 +35,9 @@ function Contact() {
   return (
     <>
       <div
+        data-aos="zoom-in"
         name="Contact"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
+        className="max-w-screen-2xl  container mx-auto px-4 md:px-20 my-16 h-[600px] bg-[#ADD8E5]"
       >
         <h1 className="text-xl text-[#006FDD] mb-4 ">Contact me</h1>
         <span>Please fill out the form below to contact me</span>
@@ -45,7 +53,7 @@ function Contact() {
               <label className="block text-gray-700"> FullName</label>
               <input
                 {...register("name", { required: true })}
-                className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-[#1cd679] focus:shadow-outline"
                 id="name"
                 name="name"
                 type="text"
@@ -59,7 +67,7 @@ function Contact() {
               <label className="block text-gray-700"> Email</label>
               <input
                 {...register("email", { required: true })}
-                className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-[#1cd679] focus:shadow-outline"
                 id="email"
                 name="email"
                 type="text"
@@ -73,7 +81,7 @@ function Contact() {
               <label className="block text-gray-700">Message </label>
               <textarea
                 {...register("message", { required: true })}
-                className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-[#1cd679] focus:shadow-outline"
                 id="message"
                 name="message"
                 type="text"
@@ -85,7 +93,7 @@ function Contact() {
             </div>
             <button
               type="submit"
-              className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300 "
+              className="bg-black text-white rounded-lg px-3 py-2 hover:bg-white hover:text-black hover:outline-double  "
             >
               Send
             </button>

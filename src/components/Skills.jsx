@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import html from "/html.png";
 import css from "/css.jpg";
 import javascript from "/java-script.png";
@@ -7,8 +7,13 @@ import tailwind from "/tailwind.png";
 import github from "/github.png";
 import Bootstrap from "/bootstrap.png";
 import responsive from "/responsive.avif";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Skills() {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
   const cardItems = [
     {
       id: 1,
@@ -53,8 +58,9 @@ function Skills() {
   ];
   return (
     <div
+      data-aos="zoom-in"
       name="Skills"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-16"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-16 bg-[#ADD8E5]"
     >
       <h1 className="text-xl text-[#006FDD]  mb-5">Skills</h1>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-3">
@@ -76,6 +82,7 @@ function Skills() {
           </div>
         ))}
       </div>
+      <hr className="border-[#DC143C] mt-20 ml-20 mr-20" />
     </div>
   );
 }

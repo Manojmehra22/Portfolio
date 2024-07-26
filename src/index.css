@@ -2,8 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  scroll-behavior: auto;
+}
 body {
   font-family: "poppins", sans-serif;
-  background-color: #f9f4e8;
+  background-color: #eee7f6;
 }

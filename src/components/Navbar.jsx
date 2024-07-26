@@ -11,11 +11,7 @@ function Navbar() {
       id: 1,
       text: "Home",
     },
-
-    {
-      id: 2,
-      text: "Resume",
-    },
+    ,
     {
       id: 3,
       text: "Skills",
@@ -24,34 +20,56 @@ function Navbar() {
       id: 4,
       text: "Contact",
     },
+    {
+      id: 2,
+      text: "Resume",
+      isResume: true,
+    },
   ];
+
+  const handleResumeDownload = () => {
+    const resumePath = "/resume.pdf";
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = "Manoj resume.pdf";
+    link.click();
+  };
+
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-5 bg-[#f9f4e8]">
-        <div className="flex justify-between items-center h-16 ">
-          <div className="flex">
-            <img src={flogo} className="h-12 w-15 rounded-full mt-1" />
-            <h1 className="font-semibold text-xl cursor-pointer ">
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-10 bg-[#ADD8E5]">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <img
+              src={flogo}
+              className="h-12 w-15 rounded-full mt-1"
+              alt="Logo"
+            />
+            <h1 className="font-semibold text-xl cursor-pointer">
               Mano<span className="text-[#006FDD] text-2xl">j</span>
               <p className="text-sm">Frontend Developer</p>
             </h1>
           </div>
           <div>
             <ul className="hidden md:flex space-x-8">
-              {navItems.map(({ id, text }) => (
+              {navItems.map(({ id, text, isResume }) => (
                 <li
-                  className=" hover:text-[#006FDD] hover:scale-110 duration-200 cursor-pointer"
+                  className="hover:text-[#006FDD] hover:scale-110 duration-100 hover:cursor-pointer  "
                   key={id}
                 >
-                  <Link
-                    to={text}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active"
-                  >
-                    {text}
-                  </Link>
+                  {isResume ? (
+                    <button onClick={handleResumeDownload}>{text}</button>
+                  ) : (
+                    <Link
+                      to={text}
+                      smooth={true}
+                      duration={500}
+                      offset={-70}
+                      activeClass="active"
+                    >
+                      {text}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -61,25 +79,35 @@ function Navbar() {
           </div>
         </div>
 
-        {/* mobile navbar */}
+        {/* Mobile navbar */}
         {menu && (
-          <div className="bg-[#f9f4e8]">
-            <ul className="  md:hidden  flex flex-col h-screen items-center justify-center space-y-3 text-xl">
-              {navItems.map(({ id, text }) => (
+          <div className="bg-[#f9f4e8] ">
+            <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
+              {navItems.map(({ id, text, isResume }) => (
                 <li
-                  className=" hover:text-[#006FDD] hover:scale-110 duration-200 cursor-pointer"
+                  className="hover:text-[#006FDD] hover:scale-110 duration-200 cursor-pointer"
                   key={id}
                 >
-                  <Link
-                    onClick={() => setMenu(!menu)}
-                    to={text}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active"
-                  >
-                    {text}
-                  </Link>
+                  {isResume ? (
+                    <button
+                      href="#"
+                      onClick={handleResumeDownload}
+                      className="border border-blue-700 text-white h-[40px] w-[100px] bg-blue-700 rounded-md hover:bg-white hover:text-black"
+                    >
+                      {text}
+                    </button>
+                  ) : (
+                    <Link
+                      onClick={() => setMenu(!menu)}
+                      to={text}
+                      smooth={true}
+                      duration={500}
+                      offset={-70}
+                      activeClass="active"
+                    >
+                      {text}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
