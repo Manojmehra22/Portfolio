@@ -37,10 +37,14 @@ function Contact() {
       <div
         data-aos="zoom-in"
         name="Contact"
-        className="max-w-screen-2xl  container mx-auto px-4 md:px-20 my-16 h-[600px] bg-[#ADD8E5]"
+        className="max-w-screen-2xl  container mx-auto px-4 md:px-20 my-16 h-[600px]  bg-[#ADD8E5]"
       >
-        <h1 className="text-xl text-[#006FDD] mb-4 ">Contact me</h1>
-        <span>Please fill out the form below to contact me</span>
+        <h1 className="text-xl text-[#006FDD] mb-4 md:ml-[150px] ">
+          Contact me
+        </h1>
+        <span className="md:ml-[150px]">
+          Please fill out the form below to contact me
+        </span>
         <div className="flex flex-col items-center justify-center mt-5">
           <form
             onSubmit={handleSubmit(onSubmit)}

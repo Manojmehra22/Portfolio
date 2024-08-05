@@ -11,34 +11,34 @@ function Navbar() {
       id: 1,
       text: "Home",
     },
-    ,
+
     {
-      id: 3,
+      id: 2,
       text: "Skills",
     },
     {
-      id: 4,
+      id: 3,
       text: "Contact",
     },
     {
-      id: 2,
+      id: 4,
       text: "Resume",
       isResume: true,
     },
   ];
 
   const handleResumeDownload = () => {
-    const resumePath = "/resume.pdf";
+    const resumePath = "./resume1.pdf";
     const link = document.createElement("a");
     link.href = resumePath;
-    link.download = "Manoj resume.pdf";
+    link.download = "Manoj-resume.pdf";
     link.click();
   };
 
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-10 bg-[#ADD8E5]">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-10 bg-[#ADD8E5] ">
+        <div className="flex justify-between items-center h-16 md:ml-[150px] md:mr-[150px]">
           <div className="flex items-center">
             <img
               src={flogo}
@@ -81,7 +81,7 @@ function Navbar() {
 
         {/* Mobile navbar */}
         {menu && (
-          <div className="bg-[#f9f4e8] ">
+          <div className="bg-[#ADD8E5] ">
             <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
               {navItems.map(({ id, text, isResume }) => (
                 <li

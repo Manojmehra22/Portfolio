@@ -12,9 +12,9 @@ function Home() {
     <>
       <div
         name="Home"
-        className=" max-w-screen-2xl container mx-auto px-4  md:px-20 my-20 md:h-[600px] bg-[#ADD8E5]  "
+        className=" home max-w-screen-2xl container mx-auto px-4  md:px-20 my-20 md:h-[600px] bg-[#ADD8E5]  "
       >
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row md:ml-[150px] ">
           <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 md:order-1 order-2 ">
             <span className="text-xl">Welcome In My Feed</span>
             <div className="flex space-x-1 text-2xl md:text-4xl">
