@@ -37,7 +37,7 @@ function Contact() {
       <div
         data-aos="zoom-in"
         name="Contact"
-        className="max-w-screen-2xl  container mx-auto px-4 md:px-20 my-16 h-[600px]  bg-[#ADD8E5]"
+        className="max-w-screen-2xl  container mx-auto px-4 md:px-20 my-16 h-[600px]  "
       >
         <h1 className="text-xl text-[#006FDD] mb-4 md:ml-[150px] ">
           Contact me
@@ -52,7 +52,9 @@ function Contact() {
             // method="POST"
             className="bg-slate-200 w-96 px-8 py-6 mt-20 rounded-xl"
           >
-            <h1 className="text-medium  mb-4">Send Your Message</h1>
+            <h1 className="text-medium text-gray-700 mb-4">
+              Send Your Message
+            </h1>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700"> FullName</label>
               <input
@@ -64,7 +66,9 @@ function Contact() {
                 placeholder="Enter your fullname"
               />
               {errors.name?.type === "required" && (
-                <p role="alert">This field is required</p>
+                <p role="alert" className="text-gray-700">
+                  This field is required
+                </p>
               )}
             </div>
             <div className="flex flex-col mb-4">
@@ -78,7 +82,9 @@ function Contact() {
                 placeholder="Enter your email"
               />
               {errors.email?.type === "required" && (
-                <p role="alert">This field is required</p>
+                <p role="alert" className="text-gray-700">
+                  This field is required
+                </p>
               )}
             </div>
             <div className="flex flex-col mb-4">
@@ -92,7 +98,9 @@ function Contact() {
                 placeholder="Type your message...."
               />
               {errors.message?.type === "required" && (
-                <p role="alert">This field is required</p>
+                <p role="alert" className="text-gray-700">
+                  This field is required
+                </p>
               )}
             </div>
             <button

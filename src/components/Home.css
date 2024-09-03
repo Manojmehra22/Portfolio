@@ -1,0 +1,15 @@
+@media only screen and (min-width: 767px) {
+  .piccontainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pic {
+    width: 320px;
+    height: 320px;
+    display: flex;
+  }
+}
+.pic {
+  border-radius: 16px;
+}

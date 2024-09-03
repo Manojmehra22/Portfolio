@@ -7,5 +7,14 @@ html {
 }
 body {
   font-family: "poppins", sans-serif;
-  background-color: #eee7f6;
+  background-color: var(--body_background);
+  color: var(--body_color);
+}
+:root {
+  --body_background: #eee7f6;
+  --body_color: black;
+}
+[data-theme="dark"] {
+  --body_background: #282c34;
+  --body_color: white;
 }

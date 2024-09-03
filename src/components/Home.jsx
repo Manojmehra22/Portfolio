@@ -1,23 +1,24 @@
 import React from "react";
-import manoj1 from "/manoj1.jpg";
+import manojpic from "/manojpic.jpg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 
 import { FaGithub } from "react-icons/fa";
 
 import { ReactTyped } from "react-typed";
+import "./Home.css";
 
 function Home() {
   return (
     <>
       <div
         name="Home"
-        className=" home max-w-screen-2xl container mx-auto px-4  md:px-20 my-20 md:h-[600px] bg-[#ADD8E5]  "
+        className=" home max-w-screen-2xl container mx-auto px-4  md:px-20 my-20 md:h-[600px]   "
       >
         <div className="flex flex-col md:flex-row md:ml-[150px] ">
           <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 md:order-1 order-2 ">
             <span className="text-xl">Welcome In My Feed</span>
-            <div className="flex space-x-1 text-2xl md:text-4xl">
+            <div className=" heading flex space-x-1 text-2xl md:text-4xl">
               <h1>Hello,I'm a </h1>
               <ReactTyped
                 className="text-[#DC143C]  "
@@ -27,6 +28,7 @@ function Home() {
                 loop={true}
               />
             </div>
+
             <br />
 
             <p className="text-sm md:text-md text-justify">
@@ -64,10 +66,10 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:ml-36 md:mt-20 mt-8 order-1  ">
+          <div className="  piccontainer md:w-1/2 md:ml-36 md:mt-20  order-1  ">
             <img
-              src={manoj1}
-              className="rounded-full border-[#DC143C] md:h-[350px] md:w-[350px] shadow-md shadow-[#DC143C] object-cover "
+              src={manojpic}
+              className=" pic hover:scale-110 duration-200 border-[#DC143C] md:h-[360px] md:w-[250px]   object-cover "
             />
           </div>
         </div>
