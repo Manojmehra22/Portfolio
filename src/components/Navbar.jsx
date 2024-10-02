@@ -3,6 +3,7 @@ import flogo from "/flogo.png";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
+import "./Navbar.css";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -40,9 +41,19 @@ function Navbar() {
     link.click();
   };
 
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 0) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
   return (
     <>
-      <div className="  max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 fixed shadow-md  top-0 left-0 right-0 z-10">
+      <div className=" navbar max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 fixed shadow-md  top-0 left-0 right-0 z-10">
         <div className="flex justify-between items-center h-16 md:ml-[150px] md:mr-[150px]">
           <div className="flex items-center">
             <img
