@@ -34,10 +34,10 @@ function Navbar() {
   ];
 
   const handleResumeDownload = () => {
-    const resumePath = "./ManojKumar-resume.pdf";
+    const resumePath = "./MANOJ KUMAR-Resume.pdf";
     const link = document.createElement("a");
     link.href = resumePath;
-    link.download = "ManojKumar-resume.pdf";
+    link.download = "MANOJ KUMAR-Resume.pdf";
     link.click();
   };
 
