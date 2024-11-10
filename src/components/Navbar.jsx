@@ -24,7 +24,7 @@ function Navbar() {
     },
     {
       id: 4,
-      text: "Contact",
+      text: "Hire Me",
     },
     {
       id: 5,

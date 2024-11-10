@@ -39,12 +39,8 @@ function Contact() {
         name="Contact"
         className="max-w-screen-2xl  container mx-auto px-4 md:px-20 my-16 h-[600px]  "
       >
-        <h1 className="text-xl text-[#006FDD] mb-4 md:ml-[150px] ">
-          Contact me
-        </h1>
-        <span className="md:ml-[150px]">
-          Please fill out the form below to contact me
-        </span>
+        <h1 className="text-xl text-[#006FDD] mb-4 md:ml-[150px] ">Hire Me</h1>
+        <span className="md:ml-[150px]">Please send me message to Hire Me</span>
         <div className="flex flex-col items-center justify-center mt-5">
           <form
             onSubmit={handleSubmit(onSubmit)}
