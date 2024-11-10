@@ -174,7 +174,7 @@ function Projects() {
               />
               <div className="px-8 py-2 relative z-10 w-full border-4 border-gray-900 bg-[#EEE7F6] opacity-[0] hover:opacity-100">
                 <h1 className="tracking-widest text-lg title-font font-medium text-indigo-600 mb-1">
-                  QR code genrator
+                  QR code generator
                 </h1>
                 <p className="title-font text-sm font-medium text-gray-900 mb-3">
                   This is a QR code generator that can help to change url into
