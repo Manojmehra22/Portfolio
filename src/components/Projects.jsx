@@ -174,11 +174,11 @@ function Projects() {
               />
               <div className="px-8 py-2 relative z-10 w-full border-4 border-gray-900 bg-[#EEE7F6] opacity-[0] hover:opacity-100">
                 <h1 className="tracking-widest text-lg title-font font-medium text-indigo-600 mb-1">
-                  Tic-Tac-Toe Game
+                  QR code genrator
                 </h1>
                 <p className="title-font text-sm font-medium text-gray-900 mb-3">
-                  This is Tic tac toe a popular game with this you can play with
-                  your friends
+                  This is a QR code generator that can help to change url into
+                  QR code coded with API and HTML,css &JS
                 </p>
                 <div className="flex justify-around pr-[50px] mt-[10px] gap-x-10">
                   <a
