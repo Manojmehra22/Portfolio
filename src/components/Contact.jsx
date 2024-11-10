@@ -36,7 +36,7 @@ function Contact() {
     <>
       <div
         data-aos="zoom-in"
-        name="Contact"
+        name="Hire Me"
         className="max-w-screen-2xl  container mx-auto px-4 md:px-20 my-16 h-[600px]  "
       >
         <h1 className="text-xl text-[#006FDD] mb-4 md:ml-[150px] ">Hire Me</h1>
