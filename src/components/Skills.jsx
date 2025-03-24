@@ -66,7 +66,7 @@ function Skills() {
     <div
       data-aos="zoom-in"
       name="Skills"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-16  "
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-16  background "
     >
       <h1 className="text-xl text-[#006FDD]  mb-5 md:ml-[150px]">Skills</h1>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-7 my-3 md:ml-[100px] md:mr-[100px]">

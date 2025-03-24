@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import TypingGame from "/typing_game.png";
+import Zilovideo from "/Zilovideo.png";
 import TodoList from "/todolist.png";
 import QRcode from "/QRcode.png";
 import WeatherApp from "/weatherapp.png";
@@ -168,21 +168,21 @@ function Projects() {
           <div className="lg:w-1/3 sm:w-1/2 p-4  ">
             <div className="flex relative h-[200px]">
               <img
-                alt="tictoe img"
+                alt="Zilovideoimg"
                 className="absolute inset-0 h-full w-full object-cover object-center border-solid border-4 border-black "
-                src={QRcode}
+                src={Zilovideo}
               />
               <div className="px-8 py-2 relative z-10 w-full border-4 border-gray-900 bg-[#EEE7F6] opacity-[0] hover:opacity-100">
                 <h1 className="tracking-widest text-lg title-font font-medium text-indigo-600 mb-1">
-                  QR code generator
+                  ZiloVideoCallApp
                 </h1>
                 <p className="title-font text-sm font-medium text-gray-900 mb-3">
-                  This is a QR code generator that can help to change url into
-                  QR code coded with API and HTML,css &JS
+                  This is a Zilovideocall App that you can call or meeting to
+                  someone online created with Reactjs and API's.
                 </p>
                 <div className="flex justify-around pr-[50px] mt-[10px] gap-x-10">
                   <a
-                    href="https://github.com/Manojmehra22/QR-code-generator"
+                    href="https://github.com/Manojmehra22/ZiloVideoCall_App"
                     target="_blank"
                   >
                     <button className="border-solid border-2 border-indigo-600 h-[50px] w-[90px] hover:bg-indigo-600 hover:text-white rounded-md">
@@ -190,7 +190,7 @@ function Projects() {
                     </button>
                   </a>
                   <a
-                    href="https://qr-code-generator-drab-rho.vercel.app/"
+                    href="https://zilo-video-call-app.vercel.app/"
                     target="_blank"
                   >
                     <button className="h-[50px] w-[90px] text-white bg-indigo-600 hover:bg-white hover:border-solid border-2 border-indigo-600 hover:text-black rounded-md">
